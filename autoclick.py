@@ -1,18 +1,21 @@
 import pyautogui as pg
 import pygetwindow as pw
+import os
+from dotenv import load_dotenv
 
-reg_freq= pw.getWindowsWithTitle('Registro de Ponto v2.1')[0]
-def autoclick_regfreq(password):
-   
+load_dotenv()
+
+
+
+def autoclick_reg(password):
+    reg = pw.getWindowsWithTitle(os.environ['KEY_NAME'])[0]
+    reg.restore()
+    reg.activate()
     pg.moveTo(1024, 610, 0.5)
     pg.click()
-    reg_freq.activate()
-    reg_freq.restore()
-    pg.moveTo(reg_freq.top+215, reg_freq.left+155, 0.5)
+    pg.moveTo(reg.left+220, reg.top+125, 0.5)
     pg.click()
     pg.write(password)
-    pg.moveTo(reg_freq.top+215, reg_freq.left+205, 0.5)
+    pg.moveTo(reg.left+220, reg.top+125, 0.5)
     pg.click()
 
-
-# reg_freq.activate()
