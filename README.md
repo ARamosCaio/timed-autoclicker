@@ -6,5 +6,7 @@ Automating a clicking daily process using python
 
 ## Tools Used
 
-- Pygetwindow
+- pygetwindow
 - pyautogui
+
+## What I've Learned 
