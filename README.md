@@ -10,3 +10,4 @@ Automating a clicking daily process using python
 - pyautogui
 
 ## What I've Learned 
+- Automate processes with pyautogui 
